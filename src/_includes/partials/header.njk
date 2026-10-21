@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="{{ '/' | url }}">
-      <span class="brand__logo"><img src="{{ '/assets/img/brand/logo.png' | url }}" alt="" width="64" height="64"></span>
+      <span class="brand__logo"><img src="{{ '/assets/img/brand/logo.svg' | url }}" alt="" width="56" height="64"></span>
       <span class="brand__name">{{ site.name }}</span>
       <span class="brand__team">Team {{ site.teamNumber }}</span>
     </a>
@@ -12,7 +12,7 @@
         <li><a href="{{ item.url | url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
         {% endfor %}
       </ul>
-      <a class="btn btn--moss" href="{{ '/join/' | url }}">Join the team</a>
+      <a class="btn btn--leaf" href="{{ '/join/' | url }}">Join the team</a>
     </nav>
   </div>
 </header>

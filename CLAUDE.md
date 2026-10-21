@@ -131,7 +131,7 @@ Five project skills in `.claude/skills/` cover the common jobs and carry their o
 
 ## The team logo
 
-The dragon logo is `src/assets/img/brand/logo.png` (280px, transparent). Its dark greens disappear on black or moss, so the header and footer are light (`--fog`) and the logo sits on them directly. Elsewhere, put it only on a light section. Do not place it directly on a dark background, and do not recolor or redraw it. The favicon and touch icon are made from it.
+The dragon logo is `src/assets/img/brand/logo.svg`: one solid shape in `--leaf` green (#24a21b), so it reads on the black header and footer and on light sections. Do not place it on moss, where the greens clash, and do not recolor or redraw it. The favicon and touch icon were made from the previous logo and have not been updated.
 
 ## Open items a human has to confirm
 
