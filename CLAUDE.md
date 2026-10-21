@@ -81,6 +81,8 @@ This site speaks for a youth organization. Do not make up any of the following. 
 
 Competition results come from The Blue Alliance (`https://www.thebluealliance.com/team/1102/<year>`). Copy what it states and nothing more. Leave a field empty rather than guessing.
 
+**Event names are always the official names** as The Blue Alliance or FIRST lists them. No nicknames, abbreviations, or rewording.
+
 ## Student privacy
 
 - No student last names, no photos of identifiable students, and no student email addresses or phone numbers on the site, unless a mentor confirms the family has given permission.
