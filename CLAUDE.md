@@ -10,7 +10,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 
 | To change this | Edit this |
 | --- | --- |
-| Team name, email, address, nav, join/donate links, social links | `src/_data/site.json` |
+| Team name, email, address, EIN and nonprofit status, nav, join/donate links, social links | `src/_data/site.json` |
 | Competitions and other dates | `src/_data/events.json` |
 | Sponsors and giving levels | `src/_data/sponsors.json` |
 | FAQ questions and answers | `src/_data/faqs.json` |

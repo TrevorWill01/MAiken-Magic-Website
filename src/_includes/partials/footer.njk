@@ -7,6 +7,7 @@
           <span class="brand__name">{{ site.name }}</span>
         </a>
         <p class="soft" style="color: var(--on-dark-soft)">{{ site.team }}. A program of the {{ site.longName }}.</p>
+        {% if site.ein %}<p class="soft" style="color: var(--on-dark-soft)">The {{ site.longName }} is a <span style="white-space: nowrap">{{ site.nonprofitStatus }}</span>. <span style="white-space: nowrap">EIN {{ site.ein }}</span>.</p>{% endif %}
         <address>
           {{ site.address.street }}<br>
           {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}
