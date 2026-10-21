@@ -12,7 +12,8 @@
   <meta property="og:title" content="{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}, FIRST Robotics Team {{ site.teamNumber }}{% endif %}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml">
+  <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
   <link rel="preload" href="{{ '/assets/fonts/bebas-neue-latin-400-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ '/assets/fonts/source-sans-3-latin-wght-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}">

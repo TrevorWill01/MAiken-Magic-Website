@@ -41,7 +41,7 @@ Fonts: **Bebas Neue** for headlines and **Source Sans 3** for body text. Both ar
 Want to own the look? Some starting points, from small to large:
 
 1. **Re-tune the palette.** Edit `tokens.css`, run `npm start`, and see if you can make it feel more like us. Check contrast before you commit.
-2. **Redraw the sigil.** Change the rune seed, the tooth count, or the rings in `lib/sigil.mjs`. Or replace it with the team's dragon logo as an SVG.
+2. **Redraw the sigil.** Change the rune seed, the tooth count, or the rings in `lib/sigil.mjs`. The dragon logo lives in `src/assets/img/brand/logo.png`. It is a small PNG, so a vector (SVG) version would let it scale cleanly. Its dark greens fade on dark backgrounds, which is why the header and footer set it on a light tile.
 3. **Add team photos.** Put resized images in `src/assets/img/photos/` and list them in `src/_data/photos.json`:
 
    ```json
