@@ -14,7 +14,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | Competitions and other dates | `src/_data/events.json` |
 | Sponsors and giving levels | `src/_data/sponsors.json` |
 | FAQ questions and answers | `src/_data/faqs.json` |
-| People shown on About | `src/_data/leadership.json` |
+| Mentors (Mentors page) | `src/_data/leadership.json` |
 | Subteam descriptions | `src/_data/subteams.json` |
 | FRC, FLL, and off-season program blurbs | `src/_data/programs.json` |
 | Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |

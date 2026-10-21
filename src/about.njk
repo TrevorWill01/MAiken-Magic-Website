@@ -1,6 +1,6 @@
 ---
 title: About
-description: "M'Aiken Magic supports FIRST Robotics Competition Team 1102 at Aiken High School. Meet the people and the mission behind the team."
+description: "M'Aiken Magic supports FIRST Robotics Competition Team 1102 at Aiken High School. Learn about the mission behind the team."
 permalink: /about/
 ---
 <section class="pagehead">
@@ -35,28 +35,7 @@ permalink: /about/
   </div>
 </section>
 
-<section class="band band--fog2">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2>Leadership</h2>
-      <p>The adults who guide the team and the foundation.</p>
-    </div>
-    <ul class="people">
-      {% for p in leadership %}
-      <li>
-        <span class="initials" aria-hidden="true">{{ p.name | initials }}</span>
-        <div>
-          <h3>{{ p.name }}</h3>
-          <p class="role">{{ p.role }}</p>
-          {% if p.bio %}<p class="soft">{{ p.bio }}</p>{% endif %}
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="band cta">
+<section class="band band--fog2 cta">
   <div class="wrap">
     <h2>Want to be part of it?</h2>
     <p>We are always looking for students, mentors, and sponsors.</p>
