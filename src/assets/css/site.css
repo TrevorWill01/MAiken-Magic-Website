@@ -334,12 +334,59 @@ a:hover { color: var(--black); }
 .ladder .recognition { flex-basis: 100%; max-width: none; margin: 0; font-size: var(--step--1); color: var(--on-dark-soft); }
 .ladder--light .recognition { color: var(--text-soft); }
 
-/* Sponsor wall */
-.wall h3 { margin: 2.5rem 0 1rem; }
-.wall h3:first-child { margin-top: 0; }
-.wall ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; align-items: center; }
-.wall img { display: block; height: auto; max-height: 5rem; width: auto; max-width: 14rem; }
-.wall .name { font-family: var(--font-display); font-size: var(--display-s); line-height: 1; color: var(--black); }
+/* Sponsor wall: one tile per sponsor, larger for higher levels (--rank 8 = Dragon, 1 = Novice) */
+.wall__intro { margin: 0.75rem 0 2.5rem; }
+.wall__tier + .wall__tier { margin-top: 2.25rem; }
+.wall__label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1rem;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+.wall__label::after { content: ""; flex: 1; height: 1px; background: rgb(0 0 0 / 0.15); }
+.wall ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(var(--cols-sm), minmax(0, 1fr));
+}
+@media (min-width: 48rem) { .wall ul { grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); } }
+.wall li { display: flex; }
+.wall li > a, .wall li > .name, .wall li > img { flex: 1; }
+.wall li > a { display: flex; color: inherit; text-decoration: none; }
+.wall li > a:hover .name { background: var(--moss); color: var(--on-dark); }
+.wall .name, .wall img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(3.5rem + var(--rank) * 0.9rem);
+  padding: 1rem 1.25rem;
+  background: var(--fog-2);
+  border-radius: var(--leaf-radius);
+}
+.wall .name { font-family: var(--font-display); font-size: calc(1.15rem + var(--rank) * 0.3rem); letter-spacing: 0.02em; line-height: 1.05; color: var(--black); }
+@media (max-width: 47.99rem) {
+  .wall .name { font-size: calc(1rem + var(--rank) * 0.18rem); padding: 0.85rem; }
+  .wall .name, .wall img { min-height: calc(3rem + var(--rank) * 0.6rem); }
+}
+.wall img { box-sizing: border-box; width: 100%; height: calc(3.5rem + var(--rank) * 0.9rem); object-fit: contain; }
+
+/* Giving levels: compact cards */
+.levels { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr)); }
+@media (min-width: 48rem) { .levels { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); } }
+.levels li { padding: 1rem 1rem 1.2rem; background: var(--fog); border-radius: var(--leaf-radius); }
+.levels h3 { font-size: var(--display-s); margin: 0; }
+.levels .range { margin: 0.35rem 0 0.75rem; font-weight: 700; color: var(--moss); }
+.levels .recognition { margin: 0; font-size: var(--step--1); color: var(--text-soft); }
 
 /* ---------- Leadership and photos ---------- */
 .people { list-style: none; margin: 0; padding: 0; display: grid; gap: 2.5rem 3rem; }
