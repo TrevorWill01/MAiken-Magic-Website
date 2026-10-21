@@ -334,7 +334,7 @@ a:hover { color: var(--black); }
 .ladder .recognition { flex-basis: 100%; max-width: none; margin: 0; font-size: var(--step--1); color: var(--on-dark-soft); }
 .ladder--light .recognition { color: var(--text-soft); }
 
-/* Sponsor wall: one tile per sponsor, larger for higher levels (--rank 8 = Dragon, 1 = Novice) */
+/* Sponsor wall: one tile per sponsor, larger for higher levels (--rank 8 = Dragon, 1 = Apprentice) */
 .wall__intro { margin: 0.75rem 0 2.5rem; }
 .wall__tier + .wall__tier { margin-top: 2.25rem; }
 .wall__label {
@@ -388,8 +388,7 @@ a:hover { color: var(--black); }
 .levels { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr)); }
 @media (min-width: 48rem) { .levels { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); } }
 .levels li { padding: 1rem 1rem 1.2rem; background: var(--moss); border-radius: var(--leaf-radius); }
-.levels h3 { font-size: var(--display-s); margin: 0; color: var(--on-dark); }
-.levels .range { margin: 0.35rem 0 0.75rem; font-weight: 700; color: var(--on-dark); }
+.levels h3 { font-size: var(--display-s); margin: 0 0 0.6rem; color: var(--on-dark); }
 .levels .recognition { margin: 0; font-size: var(--step--1); color: var(--on-dark-soft); }
 
 /* ---------- Leadership and photos ---------- */
