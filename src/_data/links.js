@@ -8,5 +8,6 @@ const mail = (subject) => `mailto:${site.email}?subject=${encodeURIComponent(sub
 export default {
   join: site.joinFormUrl || mail(`Joining Team ${site.teamNumber}`),
   sponsor: site.donateUrl || mail(`Sponsoring Team ${site.teamNumber}`),
+  mentor: mail(`Mentoring Team ${site.teamNumber}`),
   ask: mail(`Question about Team ${site.teamNumber}`),
 };

@@ -1,6 +1,6 @@
 ---
 title: About
-description: "M'Aiken Magic supports FIRST Robotics Competition Team 1102 at Aiken High School. Meet the people and the mission behind the team."
+description: "M'Aiken Magic supports FIRST Robotics Competition Team 1102 at Aiken High School. Learn about the mission behind the team."
 permalink: /about/
 ---
 <section class="pagehead">
@@ -15,7 +15,7 @@ permalink: /about/
   <div class="wrap split">
     <div class="split__head">
       <h2>Mission</h2>
-      <img class="about-logo" src="{{ '/assets/img/brand/logo.png' | url }}" alt="M'Aiken Magic dragon logo with the team number 1102" width="280" height="280" loading="lazy">
+      <img class="about-logo" src="{{ '/assets/img/brand/logo.svg' | url }}" alt="M'Aiken Magic dragon logo with the team number 1102" width="246" height="280" loading="lazy">
     </div>
     <div class="prose">
       <p>The {{ site.longName }} introduces students to engineering and technology through FIRST programs. Students do real work: they design and build a competition robot, write its code, tell its story, and raise the money to run the team.</p>
@@ -35,28 +35,7 @@ permalink: /about/
   </div>
 </section>
 
-<section class="band band--fog2">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2>Leadership</h2>
-      <p>The adults who guide the team and the foundation.</p>
-    </div>
-    <ul class="people">
-      {% for p in leadership %}
-      <li>
-        <span class="initials" aria-hidden="true">{{ p.name | initials }}</span>
-        <div>
-          <h3>{{ p.name }}</h3>
-          <p class="role">{{ p.role }}</p>
-          {% if p.bio %}<p class="soft">{{ p.bio }}</p>{% endif %}
-        </div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="band cta">
+<section class="band band--fog2 cta">
   <div class="wrap">
     <h2>Want to be part of it?</h2>
     <p>We are always looking for students, mentors, and sponsors.</p>

@@ -12,25 +12,27 @@ permalink: /sponsors/
 <div class="teeth teeth--moss" aria-hidden="true"></div>
 
 <section class="band">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2>Our sponsors</h2>
-      <p>Thank you to everyone who backs the team.</p>
-    </div>
+  <div class="wrap">
+    <h2>Our sponsors</h2>
+    <p class="soft wall__intro">Thank you to everyone who backs the team.</p>
     <div class="wall">
       {% if sponsors.tiers | hasSponsors %}
         {% for t in sponsors.tiers | byMinDesc %}
           {% if t.sponsors.length %}
-          <h3>{{ t.name }}</h3>
-          <ul>
-            {% for s in t.sponsors %}
-            <li>
-              {% if s.url %}<a href="{{ s.url }}" rel="noopener" target="_blank">{% endif %}
-              {% if s.logo %}<img src="{{ ('/assets/img/sponsors/' + s.logo) | url }}" alt="{{ s.name }}" loading="lazy">{% else %}<span class="name">{{ s.name }}</span>{% endif %}
-              {% if s.url %}</a>{% endif %}
-            </li>
-            {% endfor %}
-          </ul>
+          {# Tiles per row by level, Novice first: wide rows for top levels, more per row lower down. #}
+          {% set cols = [5, 5, 5, 4, 3, 3, 2, 1][loop.revindex - 1] %}
+          <div class="wall__tier" style="--rank: {{ loop.revindex }}; --cols: {{ cols }}; --cols-sm: {{ 1 if cols < 4 else 2 }}">
+            <h3 class="wall__label">{{ t.name }}</h3>
+            <ul>
+              {% for s in t.sponsors %}
+              <li>
+                {% if s.url %}<a href="{{ s.url }}" rel="noopener" target="_blank">{% endif %}
+                {% if s.logo %}<img src="{{ ('/assets/img/sponsors/' + s.logo) | url }}" alt="{{ s.name }}" loading="lazy">{% else %}<span class="name">{{ s.name }}</span>{% endif %}
+                {% if s.url %}</a>{% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
           {% endif %}
         {% endfor %}
       {% else %}
@@ -44,24 +46,21 @@ permalink: /sponsors/
   </div>
 </section>
 
-<section class="band band--black">
-  <div class="wrap split">
-    <div class="split__head">
-      <h2>Giving levels</h2>
-      <p>Eight levels, named for the ranks of a wizard's career. Every gift helps, and higher levels appear larger on this site.</p>
-    </div>
-    <ul class="ladder">
+<section class="band band--fog2">
+  <div class="wrap">
+    <h2>Giving levels</h2>
+    <p class="soft wall__intro">Eight levels, named for the ranks of a wizard's career. Every gift helps, and higher levels appear larger on this site.</p>
+    <ul class="levels">
       {% for t in sponsors.tiers | byMinDesc %}
-      <li style="--rank: {{ loop.revindex }}">
-        <span class="tier">{{ t.name }}</span>
-        <span class="range">{{ t.range }}</span>
+      <li>
+        <h3>{{ t.name }}</h3>
+        <p class="range">{{ t.range }}</p>
         <p class="recognition">{{ t.recognition }}</p>
       </li>
       {% endfor %}
     </ul>
   </div>
 </section>
-<div class="teeth teeth--black" aria-hidden="true"></div>
 
 <section class="band cta">
   <div class="wrap">

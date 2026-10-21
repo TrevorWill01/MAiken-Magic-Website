@@ -16,7 +16,7 @@ const root = resolve(fileURLToPath(new URL("..", import.meta.url)), "_site");
 const args = process.argv.slice(2);
 const out = args.find((a) => !a.startsWith("--")) || "review.html";
 const pagesArg = args.find((a) => a.startsWith("--pages="));
-const ALL = ["/", "/about/", "/programs/", "/robots/", "/events/", "/sponsors/", "/join/", "/faqs/", "/contact/"];
+const ALL = ["/", "/about/", "/mentors/", "/robots/", "/events/", "/sponsors/", "/join/", "/faqs/", "/contact/"];
 const pages = pagesArg ? pagesArg.slice(8).split(",").filter(Boolean) : ALL;
 
 const types = {

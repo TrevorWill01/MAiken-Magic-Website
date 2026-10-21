@@ -1,0 +1,43 @@
+---
+title: Mentors
+description: "Meet the adult mentors who guide FIRST Robotics Competition Team 1102 in Aiken, SC."
+permalink: /mentors/
+---
+<section class="pagehead">
+  <div class="wrap">
+    <h1>Mentors</h1>
+    <p>The adults who guide {{ site.team }} and the foundation that supports it.</p>
+  </div>
+</section>
+<div class="teeth teeth--moss" aria-hidden="true"></div>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="split__head">
+      <h2>Our mentors</h2>
+      <p>Adults who volunteer their time and expertise with the students.</p>
+    </div>
+    <ul class="people">
+      {% for p in leadership %}
+      <li>
+        <span class="initials" aria-hidden="true">{{ p.name | initials }}</span>
+        <div>
+          <h3>{{ p.name }}</h3>
+          <p class="role">{{ p.role }}</p>
+          {% if p.bio %}<p class="soft">{{ p.bio }}</p>{% endif %}
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band band--fog2 cta">
+  <div class="wrap">
+    <h2>Want to mentor?</h2>
+    <p>We are always looking for adults who want to help students learn.</p>
+    <div class="btn-row">
+      <a class="btn btn--moss" href="{{ links.mentor }}">Email about mentoring</a>
+    </div>
+  </div>
+</section>

@@ -9,10 +9,10 @@ Events live in `src/_data/events.json`. The site decides for itself whether an e
 
 Ask for anything missing:
 
-1. **Name**, as the organizer writes it (for example "GRITS").
+1. **Name.** Always use the official event name exactly as The Blue Alliance (`https://www.thebluealliance.com/events/<year>`) or FIRST lists it, including capitalization and any "presented by" sponsor. Do not shorten, expand, or use a nickname, even a common one like "STING" or "SCRIW". If the event is not listed on either yet, ask for the official name.
 2. **Start date and end date.** Use `YYYY-MM-DD`. For a one-day event, start and end are the same. Confirm the **year**.
 3. **Type**, for example "Off-season competition", "Open house", or "Workshop".
-4. **Location**, optional. Only include it if you were told.
+4. **Location**, optional. Include it if you were told or if The Blue Alliance or FIRST lists it.
 5. **Link**, optional. Use the organizer's official page only.
 
 ## Steps

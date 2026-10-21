@@ -1,20 +1,47 @@
 [
   {
-    "name": "STING",
+    "name": "SOUTHEAST TOURNAMENT INVITATIONAL (@) NORTH GWINNETT",
     "type": "Off-season competition",
     "start": "2026-09-18",
     "end": "2026-09-20",
-    "location": "",
-    "url": "",
+    "location": "North Gwinnett High School, Suwanee, GA",
+    "url": "https://frc-events.firstinspires.org/2026/GASUW",
     "note": ""
   },
   {
-    "name": "SCRIW",
+    "name": "South Carolina Robotics Invitational And Workshops",
     "type": "Off-season competition",
-    "start": "2026-10-10",
+    "start": "2026-10-09",
     "end": "2026-10-10",
-    "location": "",
-    "url": "",
+    "location": "Dreher High School, Columbia, SC",
+    "url": "https://www.scriw.org/",
+    "note": ""
+  },
+  {
+    "name": "FSC District Richland Event",
+    "type": "District competition",
+    "start": "2027-03-19",
+    "end": "2027-03-21",
+    "location": "Hopkins, SC",
+    "url": "https://frc-events.firstinspires.org/2027/SCHOP",
+    "note": ""
+  },
+  {
+    "name": "FSC District Sumter Event",
+    "type": "District competition",
+    "start": "2027-04-01",
+    "end": "2027-04-03",
+    "location": "Sumter, SC",
+    "url": "https://frc-events.firstinspires.org/2027/SCSUM",
+    "note": ""
+  },
+  {
+    "name": "FIRST South Carolina State Championship",
+    "type": "District championship",
+    "start": "2027-04-08",
+    "end": "2027-04-10",
+    "location": "Anderson, SC",
+    "url": "https://frc-events.firstinspires.org/2027/SCCMP",
     "note": ""
   }
 ]

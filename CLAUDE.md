@@ -14,9 +14,9 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | Competitions and other dates | `src/_data/events.json` |
 | Sponsors and giving levels | `src/_data/sponsors.json` |
 | FAQ questions and answers | `src/_data/faqs.json` |
-| People shown on About | `src/_data/leadership.json` |
+| Mentors (Mentors page) | `src/_data/leadership.json` |
 | Subteam descriptions | `src/_data/subteams.json` |
-| FRC, FLL, and off-season program blurbs | `src/_data/programs.json` |
+| FRC, FLL, and off-season program blurbs (Home page) | `src/_data/programs.json` |
 | Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |
 | Photos on About | `src/_data/photos.json` and `src/assets/img/photos/` |
 
@@ -81,6 +81,8 @@ This site speaks for a youth organization. Do not make up any of the following. 
 
 Competition results come from The Blue Alliance (`https://www.thebluealliance.com/team/1102/<year>`). Copy what it states and nothing more. Leave a field empty rather than guessing.
 
+**Event names are always the official names** as The Blue Alliance or FIRST lists them. No nicknames, abbreviations, or rewording.
+
 ## Student privacy
 
 - No student last names, no photos of identifiable students, and no student email addresses or phone numbers on the site, unless a mentor confirms the family has given permission.
@@ -129,7 +131,7 @@ Five project skills in `.claude/skills/` cover the common jobs and carry their o
 
 ## The team logo
 
-The dragon logo is `src/assets/img/brand/logo.png` (280px, transparent). Its dark greens disappear on black or moss, so it always sits on a light tile (`.brand__logo`) in the header and footer, or on a light section. Do not place it directly on a dark background, and do not recolor or redraw it. The favicon and touch icon are made from it.
+The dragon logo is `src/assets/img/brand/logo.svg`: one solid shape in `--leaf` green (#24a21b), so it reads on the black header and footer and on light sections. Do not place it on moss, where the greens clash, and do not recolor or redraw it. The favicon and touch icon were made from the previous logo and have not been updated.
 
 ## Open items a human has to confirm
 
