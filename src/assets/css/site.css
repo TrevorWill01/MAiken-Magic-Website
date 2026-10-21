@@ -125,6 +125,7 @@ a:hover { color: var(--black); }
 }
 .nav__list a:hover { color: var(--on-dark); border-bottom-color: var(--on-dark-soft); }
 .nav__list a[aria-current="page"] { border-bottom-color: var(--leaf); }
+.nav__list a, .nav .btn { white-space: nowrap; }
 
 .nav-toggle {
   display: none;
@@ -138,7 +139,7 @@ a:hover { color: var(--black); }
   cursor: pointer;
 }
 
-@media (max-width: 62rem) {
+@media (max-width: 68rem) {
   .brand__team { display: none; }
   .js .nav-toggle { display: inline-block; }
   .js .nav {
