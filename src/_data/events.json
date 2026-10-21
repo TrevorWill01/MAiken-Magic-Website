@@ -43,5 +43,14 @@
     "location": "Anderson, SC",
     "url": "https://frc-events.firstinspires.org/2027/SCCMP",
     "note": ""
+  },
+  {
+    "name": "FIRST Championship",
+    "type": "World championship",
+    "start": "2027-04-28",
+    "end": "2027-05-01",
+    "location": "George R. Brown Convention Center, Houston, TX",
+    "url": "https://www.firstinspires.org/programs/first-championship",
+    "note": ""
   }
 ]
