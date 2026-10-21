@@ -5,7 +5,7 @@
       "min": 10000,
       "max": null,
       "range": "$10,000 and up",
-      "recognition": "Largest logo on the sponsor wall and the home page",
+      "recognition": "Everything in Wizard, plus a Dragon-themed gift",
       "sponsors": [
         {
           "name": "Crane Fund",
@@ -16,11 +16,11 @@
       ]
     },
     {
-      "name": "Archmage",
+      "name": "Wizard",
       "min": 7500,
       "max": 9999,
       "range": "$7,500 to $9,999",
-      "recognition": "Large logo on the sponsor wall and the home page",
+      "recognition": "Everything in Archmage, plus a robot demo",
       "sponsors": [
         {
           "name": "Savannah River National Laboratory",
@@ -31,11 +31,11 @@
       ]
     },
     {
-      "name": "Sorcerer",
+      "name": "Archmage",
       "min": 5000,
       "max": 7499,
       "range": "$5,000 to $7,499",
-      "recognition": "Large logo on the sponsor wall",
+      "recognition": "Everything in Sorcerer, plus a commemorative plaque from the season",
       "sponsors": [
         {
           "name": "Clarke & Concordia",
@@ -44,11 +44,11 @@
       ]
     },
     {
-      "name": "Wizard",
+      "name": "Sorcerer",
       "min": 2500,
       "max": 4999,
       "range": "$2,500 to $4,999",
-      "recognition": "Logo on the sponsor wall",
+      "recognition": "Everything in Mage, plus a team shirt and your logo on the robot",
       "sponsors": []
     },
     {
@@ -56,7 +56,7 @@
       "min": 1000,
       "max": 2499,
       "range": "$1,000 to $2,499",
-      "recognition": "Logo on the sponsor wall",
+      "recognition": "Everything in Enchanter, plus your logo on the team shirts worn at competitions",
       "sponsors": [
         {
           "name": "SHAW Floors",
@@ -83,23 +83,23 @@
       "min": 500,
       "max": 999,
       "range": "$500 to $999",
-      "recognition": "Name on the sponsor wall",
+      "recognition": "Name and logo on the website, a social media thank you, and your logo on the sponsor banner",
+      "sponsors": []
+    },
+    {
+      "name": "Magic Maker",
+      "min": 250,
+      "max": 499,
+      "range": "$250 to $499",
+      "recognition": "Name and logo on the website, and a thank you card",
       "sponsors": []
     },
     {
       "name": "Apprentice",
-      "min": 250,
-      "max": 499,
-      "range": "$250 to $499",
-      "recognition": "Name on the sponsor wall",
-      "sponsors": []
-    },
-    {
-      "name": "Novice",
       "min": 1,
       "max": 249,
       "range": "$1 to $249",
-      "recognition": "Name on the sponsor wall",
+      "recognition": "Name on the website, and a thank you card",
       "sponsors": []
     }
   ]

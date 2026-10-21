@@ -8,7 +8,7 @@ description: Add or update a sponsor on the Team 1102 website. Use when someone 
 Ask for anything missing before you start:
 
 1. **Sponsor name**, spelled exactly as they want it shown.
-2. **Giving level.** One of: Novice, Apprentice, Enchanter, Mage, Wizard, Sorcerer, Archmage, Dragon. If they give a dollar amount instead, map it using the `min` and `max` values in `src/_data/sponsors.json`. If the amount is not covered, ask.
+2. **Giving level.** One of, lowest to highest: Apprentice, Magic Maker, Enchanter, Mage, Sorcerer, Archmage, Wizard, Dragon. If they give a dollar amount instead, map it using the `min` and `max` values in `src/_data/sponsors.json`. If the amount is not covered, ask.
 3. **Logo**, if they have one. Names-only sponsors are fine.
 4. **Website**, optional. Only link to the sponsor's own site.
 

@@ -1,6 +1,6 @@
 ---
 title: Sponsors
-description: "Sponsor Team 1102. See our giving levels, from Novice to Dragon, and the businesses and families who make the team possible."
+description: "Sponsor Team 1102. See our giving levels, from Apprentice to Dragon, and the businesses and families who make the team possible."
 permalink: /sponsors/
 ---
 <section class="pagehead">
@@ -19,7 +19,7 @@ permalink: /sponsors/
       {% if sponsors.tiers | hasSponsors %}
         {% for t in sponsors.tiers | byMinDesc %}
           {% if t.sponsors.length %}
-          {# Tiles per row by level, Novice first: wide rows for top levels, more per row lower down. #}
+          {# Tiles per row by level, lowest level first: wide rows for top levels, more per row lower down. #}
           {% set cols = [5, 5, 5, 4, 3, 3, 2, 1][loop.revindex - 1] %}
           <div class="wall__tier" style="--rank: {{ loop.revindex }}; --cols: {{ cols }}; --cols-sm: {{ 1 if cols < 4 else 2 }}">
             <h3 class="wall__label">{{ t.name }}</h3>
