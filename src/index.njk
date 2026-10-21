@@ -17,6 +17,14 @@ permalink: /
 </section>
 <div class="teeth teeth--moss" aria-hidden="true"></div>
 
+{% if site.homePhoto %}
+<section class="band home-photo">
+  <div class="wrap">
+    <img src="{{ ('/assets/img/photos/' + site.homePhoto.file) | url }}" alt="{{ site.homePhoto.alt }}" width="{{ site.homePhoto.width }}" height="{{ site.homePhoto.height }}" loading="lazy">
+  </div>
+</section>
+{% endif %}
+
 <section class="band">
   <div class="wrap split">
     <div class="split__head">

@@ -22,12 +22,39 @@
   "donateUrl": "",
   "social": [],
   "nav": [
-    { "label": "About", "url": "/about/" },
-    { "label": "Mentors", "url": "/mentors/" },
-    { "label": "Robots", "url": "/robots/" },
-    { "label": "Events", "url": "/events/" },
-    { "label": "Sponsors", "url": "/sponsors/" },
-    { "label": "FAQ", "url": "/faqs/" },
-    { "label": "Contact", "url": "/contact/" }
-  ]
+    {
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "label": "Mentors",
+      "url": "/mentors/"
+    },
+    {
+      "label": "Robots",
+      "url": "/robots/"
+    },
+    {
+      "label": "Events",
+      "url": "/events/"
+    },
+    {
+      "label": "Sponsors",
+      "url": "/sponsors/"
+    },
+    {
+      "label": "FAQ",
+      "url": "/faqs/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "homePhoto": {
+    "file": "team-photo.jpg",
+    "alt": "Team 1102 students and mentors in matching green shirts posing on a competition field, two of them kneeling in front holding awards",
+    "width": 1800,
+    "height": 1202
+  }
 }

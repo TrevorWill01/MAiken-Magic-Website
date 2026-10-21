@@ -19,6 +19,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | FRC, FLL, and off-season program blurbs (Home page) | `src/_data/programs.json` |
 | Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |
 | Photos on About | `src/_data/photos.json` and `src/assets/img/photos/` |
+| Team photo on Home | `homePhoto` in `src/_data/site.json` and `src/assets/img/photos/` |
 
 Page templates are the `.njk` files in `src/`. The shared header and footer are in `src/_includes/partials/`.
 
@@ -139,7 +140,7 @@ Search the repo for these before launch:
 
 1. Custom domain `www.maikenmagic.org` is set in `site.json` and `src/CNAME`. In GitHub Pages settings, confirm the custom domain shows a green check and Enforce HTTPS is on.
 2. `.github/CODEOWNERS` contains `YOUR-ORG`. Replace it with the real GitHub organization.
-3. Sponsor recognition text in `sponsors.json` is a draft. Confirm what each level really includes.
+3. Sponsor tiers, ranges, and benefits in `sponsors.json` come from the team's Sponsorship Info sheet (October 2026). If the sheet changes, update `sponsors.json` to match.
 4. Event locations and links are blank. Fill them in when known.
 5. Leadership titles in `leadership.json`, and whether each person agrees to be listed.
 6. `site.json` `phone` is empty on purpose. Add a number only if the team wants it public.
