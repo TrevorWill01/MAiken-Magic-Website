@@ -379,7 +379,7 @@ a:hover { color: var(--black); }
   .wall .name, .wall img { min-height: calc(3rem + var(--rank) * 0.6rem); }
 }
 /* Logo tiles grow faster than name tiles so tall logos stay readable at the top levels. */
-.wall img { box-sizing: border-box; width: 100%; height: calc(3.5rem + var(--rank) * var(--rank) * 0.18rem); min-height: 0; object-fit: contain; }
+.wall img { background: none; box-sizing: border-box; width: 100%; height: calc(3.5rem + var(--rank) * var(--rank) * 0.18rem); min-height: 0; object-fit: contain; }
 
 /* Giving levels: compact cards */
 .levels { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 9.5rem), 1fr)); }
