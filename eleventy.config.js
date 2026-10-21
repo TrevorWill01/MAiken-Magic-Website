@@ -53,6 +53,9 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("byMinDesc", (tiers = []) => [...tiers].sort((a, b) => b.min - a.min));
 
   eleventyConfig.addGlobalData("buildYear", new Date().getUTCFullYear());
+  // Added to CSS and JS links so browsers fetch fresh files after each deploy
+  // instead of mixing new pages with a cached old stylesheet.
+  eleventyConfig.addGlobalData("buildId", Date.now().toString(36));
 
   return {
     dir: { input: "src", includes: "_includes", data: "_data", output: "_site" },
