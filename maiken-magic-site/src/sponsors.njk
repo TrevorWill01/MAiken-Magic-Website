@@ -1,0 +1,74 @@
+---
+title: Sponsors
+description: "Sponsor Team 1102. See our giving levels, from Novice to Dragon, and the businesses and families who make the team possible."
+permalink: /sponsors/
+---
+<section class="pagehead">
+  <div class="wrap">
+    <h1>Sponsors</h1>
+    <p>Sponsorship pays for parts, tools, event registration, and travel. It also puts your name in front of the students and families of {{ site.region }}.</p>
+  </div>
+</section>
+<div class="teeth teeth--moss" aria-hidden="true"></div>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="split__head">
+      <h2>Our sponsors</h2>
+      <p>Thank you to everyone who backs the team.</p>
+    </div>
+    <div class="wall">
+      {% if sponsors.tiers | hasSponsors %}
+        {% for t in sponsors.tiers | byMinDesc %}
+          {% if t.sponsors.length %}
+          <h3>{{ t.name }}</h3>
+          <ul>
+            {% for s in t.sponsors %}
+            <li>
+              {% if s.url %}<a href="{{ s.url }}" rel="noopener" target="_blank">{% endif %}
+              {% if s.logo %}<img src="{{ ('/assets/img/sponsors/' + s.logo) | url }}" alt="{{ s.name }}" loading="lazy">{% else %}<span class="name">{{ s.name }}</span>{% endif %}
+              {% if s.url %}</a>{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        {% endfor %}
+      {% else %}
+      <div class="empty">
+        <h3>This wall is waiting for its first name</h3>
+        <p>Every sponsor who joins appears here, with a logo size that grows with their level. Yours could be the first.</p>
+        <a class="btn btn--moss" href="{{ links.sponsor }}">Become a sponsor</a>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="band band--black">
+  <div class="wrap split">
+    <div class="split__head">
+      <h2>Giving levels</h2>
+      <p>Eight levels, named for the ranks of a wizard's career. Every gift helps, and higher levels appear larger on this site.</p>
+    </div>
+    <ul class="ladder">
+      {% for t in sponsors.tiers | byMinDesc %}
+      <li style="--rank: {{ loop.revindex }}">
+        <span class="tier">{{ t.name }}</span>
+        <span class="range">{{ t.range }}</span>
+        <p class="recognition">{{ t.recognition }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<div class="teeth teeth--black" aria-hidden="true"></div>
+
+<section class="band cta">
+  <div class="wrap">
+    <h2>Become a sponsor</h2>
+    <p>Email us to choose a level, or to offer tools, materials, or mentor time instead of a gift.</p>
+    <div class="btn-row">
+      <a class="btn btn--moss" href="{{ links.sponsor }}">{% if site.donateUrl %}Give now{% else %}Email about sponsoring{% endif %}</a>
+    </div>
+  </div>
+</section>

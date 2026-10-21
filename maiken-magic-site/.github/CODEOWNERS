@@ -1,0 +1,4 @@
+# Maintainers own every file, so every pull request needs one of them to approve it.
+# Replace YOUR-ORG with your GitHub organization, and keep the team slug in
+# sync with the team you create (see SETUP.md).
+*  @YOUR-ORG/website-maintainers

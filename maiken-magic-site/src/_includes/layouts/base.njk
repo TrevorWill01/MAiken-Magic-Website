@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}, FIRST Robotics Team {{ site.teamNumber }} in {{ site.address.city }}, {{ site.address.state }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="theme-color" content="#254118">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{% if title %}{{ title }} | {{ site.name }}{% else %}{{ site.name }}, FIRST Robotics Team {{ site.teamNumber }}{% endif %}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}">
+  <link rel="preload" href="{{ '/assets/fonts/bebas-neue-latin-400-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/assets/fonts/source-sans-3-latin-wght-normal.woff2' | url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  {% include "partials/header.njk" %}
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  <script src="{{ '/assets/js/site.js' | url }}" defer></script>
+</body>
+</html>
