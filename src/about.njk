@@ -1,0 +1,67 @@
+---
+title: About
+description: "M'Aiken Magic supports FIRST Robotics Competition Team 1102 at Aiken High School. Meet the people and the mission behind the team."
+permalink: /about/
+---
+<section class="pagehead">
+  <div class="wrap">
+    <h1>About the team</h1>
+    <p>{{ site.name }} is a robotics team and an education foundation working together to give students in {{ site.region }} hands-on experience in engineering, programming, and business.</p>
+  </div>
+</section>
+<div class="teeth teeth--moss" aria-hidden="true"></div>
+
+<section class="band">
+  <div class="wrap split">
+    <div class="split__head">
+      <h2>Mission</h2>
+    </div>
+    <div class="prose">
+      <p>The {{ site.longName }} introduces students to engineering and technology through FIRST programs. Students do real work: they design and build a competition robot, write its code, tell its story, and raise the money to run the team.</p>
+      <p>The foundation supports {{ site.team }} at {{ site.school }}. The team meets year-round, and adult mentors volunteer their expertise to guide the work.</p>
+      <p>Students from any school in {{ site.region }} can join. Our five subteams give every student a place to contribute, whether that is CAD, machining, code, video, or fundraising.</p>
+      {% if photos.length %}
+      <div class="photos">
+        {% for ph in photos %}
+        <figure>
+          <img src="{{ ('/assets/img/photos/' + ph.file) | url }}" alt="{{ ph.alt }}" loading="lazy" width="{{ ph.width }}" height="{{ ph.height }}">
+          {% if ph.caption %}<figcaption>{{ ph.caption }}</figcaption>{% endif %}
+        </figure>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="band band--fog2">
+  <div class="wrap split">
+    <div class="split__head">
+      <h2>Leadership</h2>
+      <p>The adults who guide the team and the foundation.</p>
+    </div>
+    <ul class="people">
+      {% for p in leadership %}
+      <li>
+        <span class="initials" aria-hidden="true">{{ p.name | initials }}</span>
+        <div>
+          <h3>{{ p.name }}</h3>
+          <p class="role">{{ p.role }}</p>
+          <p class="soft">{{ p.bio }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="band cta">
+  <div class="wrap">
+    <h2>Want to be part of it?</h2>
+    <p>We are always looking for students, mentors, and sponsors.</p>
+    <div class="btn-row">
+      <a class="btn btn--moss" href="{{ '/join/' | url }}">Join the team</a>
+      <a class="btn btn--line" href="{{ '/sponsors/' | url }}">Sponsor the team</a>
+    </div>
+  </div>
+</section>

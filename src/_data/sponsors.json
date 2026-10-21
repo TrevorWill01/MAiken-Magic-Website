@@ -1,0 +1,68 @@
+{
+  "tiers": [
+    {
+      "name": "Dragon",
+      "min": 10000,
+      "max": null,
+      "range": "$10,000 and up",
+      "recognition": "Largest logo on the sponsor wall and the home page",
+      "sponsors": []
+    },
+    {
+      "name": "Archmage",
+      "min": 7500,
+      "max": 9999,
+      "range": "$7,500 to $9,999",
+      "recognition": "Large logo on the sponsor wall and the home page",
+      "sponsors": []
+    },
+    {
+      "name": "Sorcerer",
+      "min": 5000,
+      "max": 7499,
+      "range": "$5,000 to $7,499",
+      "recognition": "Large logo on the sponsor wall",
+      "sponsors": []
+    },
+    {
+      "name": "Wizard",
+      "min": 2500,
+      "max": 4999,
+      "range": "$2,500 to $4,999",
+      "recognition": "Logo on the sponsor wall",
+      "sponsors": []
+    },
+    {
+      "name": "Mage",
+      "min": 1000,
+      "max": 2499,
+      "range": "$1,000 to $2,499",
+      "recognition": "Logo on the sponsor wall",
+      "sponsors": []
+    },
+    {
+      "name": "Enchanter",
+      "min": 500,
+      "max": 999,
+      "range": "$500 to $999",
+      "recognition": "Name on the sponsor wall",
+      "sponsors": []
+    },
+    {
+      "name": "Apprentice",
+      "min": 250,
+      "max": 499,
+      "range": "$250 to $499",
+      "recognition": "Name on the sponsor wall",
+      "sponsors": []
+    },
+    {
+      "name": "Novice",
+      "min": 1,
+      "max": 249,
+      "range": "$1 to $249",
+      "recognition": "Name on the sponsor wall",
+      "sponsors": []
+    }
+  ]
+}

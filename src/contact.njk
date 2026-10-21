@@ -1,0 +1,43 @@
+---
+title: Contact
+description: "Email or write to Team 1102 and the M'Aiken Magic STEM Education Foundation in Aiken, SC."
+permalink: /contact/
+---
+<section class="pagehead">
+  <div class="wrap">
+    <h1>Contact us</h1>
+    <p>Questions about joining, sponsoring, or visiting? Email is the fastest way to reach us.</p>
+  </div>
+</section>
+<div class="teeth teeth--moss" aria-hidden="true"></div>
+
+<section class="band">
+  <div class="wrap contact">
+    <div>
+      <h2>Email</h2>
+      <p><a href="mailto:{{ site.email }}">{{ site.email }}</a><br><span class="soft">The team's main inbox.</span></p>
+      {% if site.mentorEmail %}
+      <p><a href="mailto:{{ site.mentorEmail }}">{{ site.mentorEmail }}</a><br><span class="soft">Lead mentor.</span></p>
+      {% endif %}
+      {% if site.phone %}
+      <h2 style="margin-top: 2rem;">Phone</h2>
+      <p>{{ site.phone }}</p>
+      {% endif %}
+    </div>
+    <div>
+      <h2>Mail</h2>
+      <address>
+        {{ site.longName }}<br>
+        {{ site.address.street }}<br>
+        {{ site.address.city }}, {{ site.address.state }} {{ site.address.zip }}
+      </address>
+      <p class="soft" style="margin-top: 1rem;">Team meetings are held at {{ site.school }}.</p>
+      {% if site.social.length %}
+      <h2 style="margin-top: 2rem;">Follow along</h2>
+      <ul>
+        {% for s in site.social %}<li><a href="{{ s.url }}" rel="noopener" target="_blank">{{ s.label }}</a></li>{% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+  </div>
+</section>
