@@ -16,7 +16,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | FAQ questions and answers | `src/_data/faqs.json` |
 | Mentors (Mentors page) | `src/_data/leadership.json` |
 | Subteam descriptions | `src/_data/subteams.json` |
-| FRC, FLL, and off-season program blurbs | `src/_data/programs.json` |
+| FRC, FLL, and off-season program blurbs (Home page) | `src/_data/programs.json` |
 | Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |
 | Photos on About | `src/_data/photos.json` and `src/assets/img/photos/` |
 

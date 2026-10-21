@@ -22,7 +22,6 @@
   "nav": [
     { "label": "About", "url": "/about/" },
     { "label": "Mentors", "url": "/mentors/" },
-    { "label": "Programs", "url": "/programs/" },
     { "label": "Robots", "url": "/robots/" },
     { "label": "Events", "url": "/events/" },
     { "label": "Sponsors", "url": "/sponsors/" },
