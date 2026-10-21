@@ -19,6 +19,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | FRC, FLL, and off-season program blurbs (Home page) | `src/_data/programs.json` |
 | Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |
 | Photos on About | `src/_data/photos.json` and `src/assets/img/photos/` |
+| Team photo on Home | `homePhoto` in `src/_data/site.json` and `src/assets/img/photos/` |
 
 Page templates are the `.njk` files in `src/`. The shared header and footer are in `src/_includes/partials/`.
 

@@ -9,7 +9,9 @@
       "sponsors": [
         {
           "name": "Crane Fund",
-          "logo": null
+          "logo": "crane-fund.png",
+          "width": 540,
+          "height": 689
         }
       ]
     },
@@ -22,7 +24,9 @@
       "sponsors": [
         {
           "name": "Savannah River National Laboratory",
-          "logo": null
+          "logo": "savannah-river-national-laboratory.png",
+          "width": 700,
+          "height": 122
         }
       ]
     },
@@ -56,15 +60,21 @@
       "sponsors": [
         {
           "name": "SHAW Floors",
-          "logo": null
+          "logo": "shaw-floors.png",
+          "width": 640,
+          "height": 153
         },
         {
           "name": "BAE Systems",
-          "logo": null
+          "logo": "bae-systems.png",
+          "width": 640,
+          "height": 99
         },
         {
           "name": "Generac",
-          "logo": null
+          "logo": "generac.png",
+          "width": 640,
+          "height": 143
         }
       ]
     },
