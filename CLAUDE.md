@@ -17,6 +17,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | People shown on About | `src/_data/leadership.json` |
 | Subteam descriptions | `src/_data/subteams.json` |
 | FRC, FLL, and off-season program blurbs | `src/_data/programs.json` |
+| Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |
 | Photos on About | `src/_data/photos.json` and `src/assets/img/photos/` |
 
 Page templates are the `.njk` files in `src/`. The shared header and footer are in `src/_includes/partials/`.
@@ -34,14 +35,14 @@ src/
     css/site.css            components and layout
     css/fonts.css           @font-face rules (do not hand-edit)
     fonts/                  Bebas Neue and Source Sans 3, self-hosted
-    img/                    photos/ and sponsors/
+    img/                    brand/ (team logo), photos/, robots/, sponsors/
     js/site.js              mobile menu. Nothing else.
   *.njk                     one file per page
-lib/sigil.mjs               generates the gear-and-rune hero artwork and the logo mark
+lib/sigil.mjs               generates the gear-and-rune hero artwork
 scripts/check-links.mjs     fails the build on a broken link, missing alt text, or wrong h1 count
 scripts/mark-preview.mjs    turns a build into a badged, noindexed preview
 scripts/review-shots.mjs    screenshots pages into one review file
-.claude/skills/             /add-sponsor, /update-events, /add-faq, /add-mentor
+.claude/skills/             /add-sponsor, /update-events, /add-faq, /add-mentor, /add-robot
 .github/                    workflows, CODEOWNERS, PR and issue templates
 ```
 
@@ -112,7 +113,7 @@ Resize before committing. Nothing in the build resizes images.
 
 ## Common jobs
 
-Four project skills in `.claude/skills/` cover the common jobs and carry their own checklists. Use them when a request matches, rather than working from these notes: `/add-sponsor`, `/update-events`, `/add-faq`, `/add-mentor`.
+Five project skills in `.claude/skills/` cover the common jobs and carry their own checklists. Use them when a request matches, rather than working from these notes: `/add-sponsor`, `/update-events`, `/add-faq`, `/add-mentor`, `/add-robot`.
 
 **A new page:** create `src/<name>.njk` with front matter for `title`, `description`, and `permalink`, then add it to `nav` in `site.json`.
 
@@ -126,11 +127,15 @@ Four project skills in `.claude/skills/` cover the common jobs and carry their o
 
 `main` is protected: only the website maintainers can merge. A maintainer reviews the screenshots and the Cloudflare preview, then merges.
 
+## The team logo
+
+The dragon logo is `src/assets/img/brand/logo.png` (280px, transparent). Its dark greens disappear on black or moss, so it always sits on a light tile (`.brand__logo`) in the header and footer, or on a light section. Do not place it directly on a dark background, and do not recolor or redraw it. The favicon and touch icon are made from it.
+
 ## Open items a human has to confirm
 
 Search the repo for these before launch:
 
-1. `site.json` `url` is a guess (`https://maikenmagic.org`). Set it to the real address.
+1. Custom domain `www.maikenmagic.org` is set in `site.json` and `src/CNAME`. In GitHub Pages settings, confirm the custom domain shows a green check and Enforce HTTPS is on.
 2. `.github/CODEOWNERS` contains `YOUR-ORG`. Replace it with the real GitHub organization.
 3. Sponsor recognition text in `sponsors.json` is a draft. Confirm what each level really includes.
 4. Event locations and links are blank. Fill them in when known.

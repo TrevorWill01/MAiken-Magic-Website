@@ -33,8 +33,8 @@ jobs:
       - name: Build and check
         run: npm run check
         env:
-          # "/" on a custom domain, "/<repo>/" on the default github.io address.
-          PATH_PREFIX: ${{ steps.pages.outputs.base_path }}/
+          # The site lives at the root of www.maikenmagic.org.
+          PATH_PREFIX: /
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

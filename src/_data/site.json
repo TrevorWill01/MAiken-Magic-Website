@@ -5,7 +5,7 @@
   "teamNumber": "1102",
   "school": "Aiken High School",
   "region": "the CSRA",
-  "url": "https://maikenmagic.org",
+  "url": "https://www.maikenmagic.org",
   "description": "M'Aiken Magic is FIRST Robotics Competition Team 1102 at Aiken High School in Aiken, SC. Students in grades 7-12 design, build, and program competition robots.",
   "email": "maikenmagicrobotics@gmail.com",
   "mentorEmail": "trevor.williams@maikenmagic.org",
@@ -22,6 +22,7 @@
   "nav": [
     { "label": "About", "url": "/about/" },
     { "label": "Programs", "url": "/programs/" },
+    { "label": "Robots", "url": "/robots/" },
     { "label": "Events", "url": "/events/" },
     { "label": "Sponsors", "url": "/sponsors/" },
     { "label": "FAQ", "url": "/faqs/" },

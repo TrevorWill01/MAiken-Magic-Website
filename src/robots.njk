@@ -1,9 +1,73 @@
 ---
-permalink: /robots.txt
-layout: false
-eleventyExcludeFromCollections: true
+title: Robots
+description: "Robots built by FIRST Robotics Competition Team 1102 over the years, with notes on how each one works."
+permalink: /robots/
 ---
-User-agent: *
-Allow: /
+{% set bots = robots | byYearDesc %}
+<section class="pagehead">
+  <div class="wrap">
+    <h1>Our robots</h1>
+    <p>Every season, students design, machine, and program a new robot in about six weeks. These are the ones we have built.</p>
+  </div>
+</section>
+<div class="teeth teeth--moss" aria-hidden="true"></div>
 
-Sitemap: {{ site.url }}/sitemap.xml
+{% if bots.length %}
+{% for r in bots %}
+<section class="band{% if loop.index0 % 2 == 1 %} band--fog2{% endif %}" id="robot-{{ r.year }}">
+  <div class="wrap robot">
+    <div class="robot__media">
+      {% if r.photo and r.photo.file %}
+      <img src="{{ ('/assets/img/robots/' + r.photo.file) | url }}" alt="{{ r.photo.alt }}" width="{{ r.photo.width }}" height="{{ r.photo.height }}"{% if not loop.first %} loading="lazy"{% endif %}>
+      {% else %}
+      <div class="robot__tile" aria-hidden="true"><span>{{ r.year }}</span></div>
+      {% endif %}
+    </div>
+    <div class="robot__body">
+      <p class="robot__season">{{ r.year }} season{% if r.game %}: {{ r.game }}{% endif %}</p>
+      <h2>{{ r.name or ("Team " + site.teamNumber + " robot") }}</h2>
+      {% if r.summary %}<p class="robot__summary">{{ r.summary }}</p>{% endif %}
+      {% if r.specs and r.specs.length %}
+      <dl class="specs">
+        {% for s in r.specs %}
+        <div><dt>{{ s.label }}</dt><dd>{{ s.value }}</dd></div>
+        {% endfor %}
+      </dl>
+      {% endif %}
+      {% if r.results %}<p class="robot__results"><strong>Results.</strong> {{ r.results }}</p>{% endif %}
+      <div class="btn-row">
+        <a class="btn btn--line" href="https://www.thebluealliance.com/team/{{ site.teamNumber }}/{{ r.year }}" rel="noopener" target="_blank">{{ r.year }} on The Blue Alliance</a>
+        {% if r.videoUrl %}<a class="btn btn--line" href="{{ r.videoUrl }}" rel="noopener" target="_blank">Watch the robot</a>{% endif %}
+        {% if r.cadUrl %}<a class="btn btn--line" href="{{ r.cadUrl }}" rel="noopener" target="_blank">See the CAD</a>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}
+{% else %}
+<section class="band">
+  <div class="wrap split">
+    <div class="split__head">
+      <h2>Robot gallery</h2>
+    </div>
+    <div class="empty">
+      <h3>Robot profiles are on the way</h3>
+      <p>Each past robot will get its own section here, with photos and how it played the game. In the meantime, our match history is on The Blue Alliance.</p>
+      <div class="btn-row" style="margin-top: 0">
+        <a class="btn btn--moss" href="https://www.thebluealliance.com/team/{{ site.teamNumber }}" rel="noopener" target="_blank">Team {{ site.teamNumber }} on The Blue Alliance</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="band cta">
+  <div class="wrap">
+    <h2>Help build the next one</h2>
+    <p>Every robot on this page was built by students. Come build the next one.</p>
+    <div class="btn-row">
+      <a class="btn btn--moss" href="{{ '/join/' | url }}">Join the team</a>
+      <a class="btn btn--line" href="{{ '/sponsors/' | url }}">Sponsor the team</a>
+    </div>
+  </div>
+</section>

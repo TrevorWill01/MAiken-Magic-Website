@@ -15,7 +15,7 @@ const todayUTC = () => {
 export default function (eleventyConfig) {
   // Static files copied as-is.
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png", "src/apple-touch-icon.png": "apple-touch-icon.png", "src/CNAME": "CNAME" });
 
   // The sigil and the small mark are generated in lib/sigil.mjs.
   eleventyConfig.addShortcode("sigil", (label) => sigil({ label }));
@@ -49,6 +49,7 @@ export default function (eleventyConfig) {
   );
   eleventyConfig.addFilter("money", (n) => "$" + Number(n).toLocaleString("en-US"));
   eleventyConfig.addFilter("hasSponsors", (tiers = []) => tiers.some((t) => (t.sponsors || []).length));
+  eleventyConfig.addFilter("byYearDesc", (items = []) => [...items].sort((a, b) => b.year - a.year));
   eleventyConfig.addFilter("byMinDesc", (tiers = []) => [...tiers].sort((a, b) => b.min - a.min));
 
   eleventyConfig.addGlobalData("buildYear", new Date().getUTCFullYear());

@@ -107,7 +107,9 @@ a:hover { color: var(--black); }
   text-decoration: none;
 }
 .brand:hover { color: var(--on-dark); }
-.brand .mark { width: 2.5rem; height: 2.5rem; color: var(--leaf); flex: none; }
+.brand__logo { display: grid; place-items: center; flex: none; width: 3.25rem; height: 3.25rem; padding: 0.25rem; background: var(--fog); border-radius: var(--leaf-radius); }
+.brand__logo img { display: block; width: 100%; height: auto; }
+.about-logo { display: block; width: min(220px, 60%); height: auto; margin-top: 2.25rem; }
 .brand__name { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.02em; line-height: 1; }
 .brand__team { font-size: var(--step--1); color: var(--on-dark-soft); line-height: 1; padding-left: 0.75rem; border-left: 1px solid rgb(238 241 234 / 0.3); }
 
@@ -430,4 +432,25 @@ a:hover { color: var(--black); }
   .site-header, .site-footer, .hero__art, .teeth, .btn-row { display: none; }
   body, .hero, .pagehead, .band--moss, .band--black { background: #fff; color: #000; }
   h1, h2, h3 { color: #000 !important; }
+}
+
+/* Robots page */
+.robot { display: grid; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.robot__media img { display: block; width: 100%; height: auto; border-radius: var(--leaf-radius); }
+.robot__tile { display: grid; place-items: center; aspect-ratio: 4 / 3; background: var(--moss); color: var(--on-dark); border-radius: var(--leaf-radius); }
+.robot__tile span { font-family: var(--font-display); font-size: var(--display-l); line-height: 1; letter-spacing: 0.02em; }
+.robot__season { font-weight: 700; color: var(--text-soft); margin-bottom: 0.4rem; }
+.robot__body h2 { margin-bottom: 1rem; }
+.robot__summary { max-width: var(--measure); }
+.specs { display: grid; gap: 0; margin: 1.5rem 0 0; max-width: 34rem; }
+.specs > div { display: grid; grid-template-columns: minmax(7rem, 11rem) 1fr; gap: 1rem; padding: 0.6rem 0; border-top: 1px solid rgb(37 65 24 / 0.25); }
+.specs > div:last-child { border-bottom: 1px solid rgb(37 65 24 / 0.25); }
+.specs dt { font-weight: 700; }
+.specs dd { margin: 0; }
+.robot__results { margin-top: 1.25rem; max-width: var(--measure); }
+@media (min-width: 52rem) {
+  .robot { grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); }
+}
+@media (max-width: 30rem) {
+  .specs > div { grid-template-columns: 1fr; gap: 0.1rem; }
 }
