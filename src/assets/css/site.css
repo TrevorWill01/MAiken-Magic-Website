@@ -186,6 +186,73 @@ a:hover { color: var(--black); }
 .btn-row { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
 .site-header .btn { padding: 0.55rem 1.15rem; font-size: 1rem; }
 
+/* ---------- Load-in screen ----------
+   Two black doors meet at the middle with the logo across the seam. The logo glitches in
+   (two colored copies jitter), a light sweeps across it, then the doors slide apart.
+   The inline script in base.njk controls timing; the failsafe hides it even if that script stops. */
+.intro { display: none; }
+.is-intro { overflow: hidden; }
+.is-intro .intro {
+  --logo-h: clamp(8rem, 32vh, 15rem);
+  --logo-w: calc(var(--logo-h) * 0.878);
+  display: block;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  animation: intro-failsafe 0s 4s forwards;
+}
+.intro__door { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: var(--black); }
+.intro__door--top { top: 0; border-bottom: 1px solid color-mix(in srgb, var(--leaf) 35%, transparent); }
+.intro__door--bottom { bottom: 0; }
+.intro__logo { position: absolute; left: 50%; width: var(--logo-w); height: var(--logo-h); translate: -50% 0; }
+.intro__door--top .intro__logo { top: calc(100% - var(--logo-h) / 2); }
+.intro__door--bottom .intro__logo { top: calc(var(--logo-h) / -2); }
+.intro__mark, .intro__ghost, .intro__shine { position: absolute; inset: 0; width: 100%; height: 100%; }
+.intro__ghost, .intro__shine {
+  mask: url("../img/brand/logo.svg") center / contain no-repeat;
+  mix-blend-mode: screen;
+  opacity: 0;
+}
+.intro__ghost--a { background: var(--glitch-a); }
+.intro__ghost--b { background: var(--glitch-b); }
+.intro__shine { background: linear-gradient(100deg, transparent 40%, rgb(255 255 255 / 0.9) 50%, transparent 60%) 175% 0 / 250% 100% no-repeat; }
+.is-intro .intro__mark { animation: intro-glitch 0.7s steps(1) both; }
+.is-intro .intro__ghost--a { animation: intro-ghost-a 0.7s steps(1) both; }
+.is-intro .intro__ghost--b { animation: intro-ghost-b 0.7s steps(1) both; }
+.is-intro .intro__shine { animation: intro-shine 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both; }
+.intro-open .intro__door--top { transition: translate 0.8s cubic-bezier(0.76, 0, 0.24, 1); translate: 0 -100%; }
+.intro-open .intro__door--bottom { transition: translate 0.8s cubic-bezier(0.76, 0, 0.24, 1); translate: 0 100%; }
+@keyframes intro-glitch {
+  0% { opacity: 0; clip-path: inset(40% 0 34%); translate: -6px 0; }
+  12% { opacity: 1; clip-path: inset(0 0 58%); translate: 8px 0; }
+  24% { clip-path: inset(54% 0 0); translate: -9px 0; }
+  38% { clip-path: inset(22% 0 38%); translate: 4px 0; }
+  56%, 100% { opacity: 1; clip-path: inset(0); translate: 0 0; }
+}
+@keyframes intro-ghost-a {
+  0% { opacity: 0; translate: -10px 2px; }
+  14% { opacity: 0.85; translate: -12px -2px; }
+  32% { translate: 7px 1px; }
+  54% { translate: -4px 0; }
+  100% { opacity: 0; translate: 0 0; }
+}
+@keyframes intro-ghost-b {
+  0% { opacity: 0; translate: 10px -2px; }
+  14% { opacity: 0.85; translate: 12px 2px; }
+  32% { translate: -7px -1px; }
+  54% { translate: 4px 0; }
+  100% { opacity: 0; translate: 0 0; }
+}
+@keyframes intro-shine {
+  0% { background-position: 175% 0; opacity: 0; }
+  15% { opacity: 1; }
+  85% { background-position: -75% 0; opacity: 1; }
+  100% { background-position: -75% 0; opacity: 0; }
+}
+@keyframes intro-failsafe { to { visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .intro { display: none !important; } }
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;

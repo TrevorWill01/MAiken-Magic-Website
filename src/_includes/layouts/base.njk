@@ -19,9 +19,24 @@
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
-  <script>document.documentElement.classList.add("js");</script>
+  <script>
+    document.documentElement.classList.add("js");
+    // Load-in screen: first page of a visit only, never when the visitor prefers reduced motion.
+    (function () {
+      try {
+        var root = document.documentElement;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        if (sessionStorage.getItem("mm-intro-seen")) return;
+        sessionStorage.setItem("mm-intro-seen", "1");
+        root.classList.add("is-intro");
+        setTimeout(function () { root.classList.add("intro-open"); }, 1200);
+        setTimeout(function () { root.classList.remove("is-intro", "intro-open"); }, 2100);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  {% include "partials/intro.njk" %}
   <a class="skip" href="#main">Skip to content</a>
   {% include "partials/header.njk" %}
   <main id="main">

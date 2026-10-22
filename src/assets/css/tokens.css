@@ -16,6 +16,8 @@
   --text-soft: #4f574a;   /* secondary text on light */
   --on-dark: #eef1ea;     /* body text on moss or black */
   --on-dark-soft: #b9c4b1;
+  --glitch-a: #ff0033;    /* load-in screen only: the two offset copies of the logo */
+  --glitch-b: #00e7ff;
 
   /* Type */
   --font-display: "Bebas Neue", Impact, "Arial Narrow", sans-serif;

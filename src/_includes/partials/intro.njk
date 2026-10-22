@@ -1,0 +1,15 @@
+{# Load-in screen: two dark doors with the logo across the seam. The logo glitches in,
+   a light sweeps across it, then the doors slide apart. Hidden unless the inline script
+   in base.njk adds .is-intro (first page of a visit, motion allowed). #}
+{% set introLogo %}
+<span class="intro__logo">
+  <img class="intro__mark" src="{{ '/assets/img/brand/logo.svg' | url }}" alt="" width="56" height="64">
+  <span class="intro__ghost intro__ghost--a"></span>
+  <span class="intro__ghost intro__ghost--b"></span>
+  <span class="intro__shine"></span>
+</span>
+{% endset %}
+<div class="intro" aria-hidden="true">
+  <div class="intro__door intro__door--top">{{ introLogo | safe }}</div>
+  <div class="intro__door intro__door--bottom">{{ introLogo | safe }}</div>
+</div>
