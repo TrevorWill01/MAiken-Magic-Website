@@ -297,10 +297,11 @@ a:hover { color: var(--black); }
   isolation: isolate;
 }
 .hero h1 {
-  font-size: var(--display-xl);
+  font-size: clamp(3rem, 1.6rem + 4.6vw, 6.25rem);
   line-height: 0.9;
   color: var(--on-dark);
-  max-width: 12ch;
+  max-width: 16ch;
+  text-wrap: balance;
   margin-bottom: 1.5rem;
 }
 .hero .lead { font-size: var(--step-1); line-height: 1.5; max-width: 34em; color: var(--on-dark); }

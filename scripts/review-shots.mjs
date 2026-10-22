@@ -61,7 +61,8 @@ figcaption{font-weight:600;margin-bottom:.4rem}img{display:block;max-width:100%;
 for (const path of pages) {
   html += `<h2>${path}</h2><div class="row">`;
   for (const s of sizes) {
-    const page = await browser.newPage({ viewport: { width: s.width, height: s.height } });
+    // reducedMotion skips the load-in screen so it never covers the screenshots.
+    const page = await browser.newPage({ viewport: { width: s.width, height: s.height }, reducedMotion: "reduce" });
     await page.goto(base + path, { waitUntil: "networkidle" });
     await page.addStyleTag({ content: "*{animation:none!important;transition:none!important}" });
     const png = await page.screenshot({ fullPage: true, type: "jpeg", quality: 70 });
