@@ -20,6 +20,7 @@ It is a static site built with [Eleventy](https://www.11ty.dev/) and published t
 | Past robots (Robots page) | `src/_data/robots.json` and `src/assets/img/robots/` |
 | Photos on About | `src/_data/photos.json` and `src/assets/img/photos/` |
 | Team photo on Home | `homePhoto` in `src/_data/site.json` and `src/assets/img/photos/` |
+| Robot photo in the Home hero | `heroImage` in `src/_data/site.json` and `src/assets/img/robots/` |
 
 Page templates are the `.njk` files in `src/`. The shared header and footer are in `src/_includes/partials/`.
 
@@ -39,7 +40,7 @@ src/
     img/                    brand/ (team logo), photos/, robots/, sponsors/
     js/site.js              mobile menu. Nothing else.
   *.njk                     one file per page
-lib/sigil.mjs               generates the gear-and-rune hero artwork
+lib/sigil.mjs               the old gear-and-rune hero artwork (no longer on the home page)
 scripts/check-links.mjs     fails the build on a broken link, missing alt text, or wrong h1 count
 scripts/mark-preview.mjs    turns a build into a badged, noindexed preview
 scripts/review-shots.mjs    screenshots pages into one review file
@@ -102,7 +103,7 @@ Competition results come from The Blue Alliance (`https://www.thebluealliance.co
 - Links that leave the site get `rel="noopener" target="_blank"`.
 - Links that stay on the site use the `| url` filter so they work under a path prefix.
 - **No third-party requests on page load.** Fonts are self-hosted and there are no embeds, analytics, or CDN scripts. Keep it that way.
-- Motion: only the hero sigil moves, and it respects `prefers-reduced-motion`. Do not add scroll or hover animations.
+- Motion: none. The home page hero is a still robot photo (`heroImage` in `site.json`). Do not add scroll or hover animations.
 
 ## Images
 
