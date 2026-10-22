@@ -56,5 +56,12 @@
     "alt": "Team 1102 students and mentors in matching green shirts posing on a competition field, two of them kneeling in front holding awards",
     "width": 1567,
     "height": 650
-  }
+  },
+  "heroImage": {
+    "file": "hero-robot.webp",
+    "alt": "Team 1102's competition robot, full of yellow game pieces, with red bumpers showing the number 1102",
+    "width": 1200,
+    "height": 739
+  },
+  "intro": "summon"
 }

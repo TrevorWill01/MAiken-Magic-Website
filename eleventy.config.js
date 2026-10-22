@@ -1,4 +1,4 @@
-import { sigil, mark } from "./lib/sigil.mjs";
+import { sigil, mark, summoningCircle } from "./lib/sigil.mjs";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
@@ -19,6 +19,7 @@ export default function (eleventyConfig) {
 
   // The sigil and the small mark are generated in lib/sigil.mjs.
   eleventyConfig.addShortcode("sigil", (label) => sigil({ label }));
+  eleventyConfig.addShortcode("summoningCircle", () => summoningCircle());
   eleventyConfig.addShortcode("mark", () => mark());
 
   // "Sept 18–20, 2026", "Oct 10, 2026", "Dec 30, 2026 – Jan 2, 2027"

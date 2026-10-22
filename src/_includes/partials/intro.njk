@@ -1,0 +1,31 @@
+{# Load-in screen: two dark doors, left and right, with the logo across the seam; the doors slide apart to
+   reveal the page. site.intro picks how the logo appears:
+     "summon"  a gear and a ring draw themselves, the dragon sweeps in with a green flash, sparks burst
+     "glitch"  the logo glitches in with two colored copies, then a light sweeps across it
+   Hidden unless the inline script in base.njk adds .is-intro (first page of a visit, motion allowed). #}
+{% set introStyle = site.intro or "glitch" %}
+{% set introStage %}
+<span class="intro__stage">
+  {% if introStyle == "summon" %}
+  <span class="intro__circle">{% summoningCircle %}</span>
+  <span class="intro__flash"></span>
+  {% endif %}
+  <span class="intro__logo">
+    <img class="intro__mark" src="{{ '/assets/img/brand/logo.svg' | url }}" alt="" width="56" height="64">
+    {% if introStyle == "glitch" %}
+    <span class="intro__ghost intro__ghost--a"></span>
+    <span class="intro__ghost intro__ghost--b"></span>
+    <span class="intro__shine"></span>
+    {% endif %}
+  </span>
+  {% if introStyle == "summon" %}
+  <span class="intro__sparks">
+    {% for i in range(0, 16) %}<i style="--a: {{ (i * 22.5 + (i % 3) * 6) }}deg; --d: {{ 34 + (i % 4) * 7 }}; --t: {{ (i % 5) * 0.04 }}s"{% if i % 3 == 0 %} class="is-white"{% endif %}></i>{% endfor %}
+  </span>
+  {% endif %}
+</span>
+{% endset %}
+<div class="intro intro--{{ introStyle }}" aria-hidden="true">
+  <div class="intro__door intro__door--left">{{ introStage | safe }}</div>
+  <div class="intro__door intro__door--right">{{ introStage | safe }}</div>
+</div>

@@ -3,16 +3,20 @@ title: ""
 permalink: /
 ---
 <section class="hero">
-  <div class="hero__art">{% sigil "" %}</div>
-  <div class="wrap">
+  <div class="wrap hero__grid">
    <div class="hero__copy">
-    <h1>Real robots, built by Aiken students.</h1>
+    <h1>Real robots, built by students from the CSRA.</h1>
     <p class="lead">{{ site.name }} is {{ site.team }}. Students in grades 8 to 12 from across {{ site.region }} meet at {{ site.school }} to design, machine, program, and promote a competition robot.</p>
     <div class="btn-row">
       <a class="btn btn--leaf" href="{{ '/join/' | url }}">Join the team</a>
       <a class="btn btn--line" href="{{ '/sponsors/' | url }}">Sponsor the team</a>
     </div>
    </div>
+   {% if site.heroImage %}
+   <div class="hero__art">
+    <img src="{{ ('/assets/img/robots/' + site.heroImage.file) | url }}" alt="{{ site.heroImage.alt }}" width="{{ site.heroImage.width }}" height="{{ site.heroImage.height }}" fetchpriority="high">
+   </div>
+   {% endif %}
   </div>
 </section>
 <div class="teeth teeth--moss" aria-hidden="true"></div>
