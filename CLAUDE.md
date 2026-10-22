@@ -103,7 +103,7 @@ Competition results come from The Blue Alliance (`https://www.thebluealliance.co
 - Links that leave the site get `rel="noopener" target="_blank"`.
 - Links that stay on the site use the `| url` filter so they work under a path prefix.
 - **No third-party requests on page load.** Fonts are self-hosted and there are no embeds, analytics, or CDN scripts. Keep it that way.
-- Motion: only the load-in screen (`partials/intro.njk`, timing in the inline script in `base.njk`). It runs on the first page of a visit, is skipped when the visitor prefers reduced motion, and has a CSS failsafe so it can never block the page. The home page hero is a still robot photo (`heroImage` in `site.json`). Do not add scroll or hover animations.
+- Motion: only the load-in screen (`partials/intro.njk`, timing in the inline script in `base.njk`). `intro` in `site.json` picks the style: `"summon"` (a gear and ring draw themselves, the dragon sweeps in, sparks, then doors open left and right) or `"glitch"`. Keep the circle to plain geometry, with no runes, letters, or symbols. It runs on the first page of a visit, is skipped when the visitor prefers reduced motion, and has a CSS failsafe so it can never block the page. The home page hero is a still robot photo (`heroImage` in `site.json`). Do not add scroll or hover animations.
 
 ## Images
 

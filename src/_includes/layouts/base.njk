@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/css/tokens.css' | url }}">
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | url }}">
+  {% set introOpen = 1400 if site.intro == "summon" else 1200 %}
   <script>
     document.documentElement.classList.add("js");
     // Load-in screen: first page of a visit only, never when the visitor prefers reduced motion.
@@ -29,8 +30,8 @@
         if (sessionStorage.getItem("mm-intro-seen")) return;
         sessionStorage.setItem("mm-intro-seen", "1");
         root.classList.add("is-intro");
-        setTimeout(function () { root.classList.add("intro-open"); }, 1200);
-        setTimeout(function () { root.classList.remove("is-intro", "intro-open"); }, 2100);
+        setTimeout(function () { root.classList.add("intro-open"); }, {{ introOpen }});
+        setTimeout(function () { root.classList.remove("is-intro", "intro-open"); }, {{ introOpen + 900 }});
       } catch (e) {}
     })();
   </script>
