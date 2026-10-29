@@ -110,6 +110,7 @@ a:hover { color: var(--black); }
 .brand__logo { display: block; flex: none; height: 4rem; }
 .brand__logo img { display: block; height: 100%; width: auto; }
 @media (max-width: 30rem) { .brand__logo { height: 3.25rem; } }
+.about-test { font-family: var(--font-display); font-size: var(--display-xl); font-weight: 700; line-height: 1; color: var(--black); margin: 0; }
 .about-logo { display: block; width: min(220px, 60%); height: auto; margin-top: 2.25rem; }
 .brand__name { font-family: var(--font-display); font-size: 2rem; letter-spacing: 0.02em; line-height: 1; }
 .brand__team { font-size: var(--step--1); color: var(--on-dark-soft); line-height: 1; padding-left: 0.75rem; border-left: 1px solid rgb(238 241 234 / 0.3); }
